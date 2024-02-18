@@ -7,28 +7,37 @@ const routes: Routes = [
     path: 'tabs',
     component: TabsPage,
     children: [
+      
+      // {
+      //   path: 'tab1',
+      //   loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+      // },
       {
-        path: 'tab1',
-        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+        path: 'genero',
+        loadChildren: () => import('../genero/genero.module').then(m => m.GeneroPageModule)
       },
       {
-        path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+        path: 'actores',
+        loadChildren: () => import('../actores/actores.module').then(m => m.ActoresPageModule)
       },
       {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        path: 'usuario',
+        loadChildren: () => import('../usuario/usuario.module').then(m => m.UsuarioPageModule)
+      },
+      {
+        path: 'peliculas',
+        loadChildren: () => import('../peliculas/peliculas.module').then(m => m.PeliculasPageModule)
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/peliculas',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/peliculas',
     pathMatch: 'full'
   }
 ];

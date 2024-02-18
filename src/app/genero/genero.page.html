@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="font-size: x-large;">Genero</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let peliculasItem of misgeneros">
+      <ion-card href="#"> 
+        <ion-card-header>
+          <ion-card-title style="font-size: x-large;">{{peliculasItem.genero}}</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>
